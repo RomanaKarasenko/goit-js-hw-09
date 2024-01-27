@@ -21,7 +21,7 @@ ul {
 
 a {
   color: currentColor;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 button {
@@ -35,10 +35,37 @@ img {
 }
 
 h1 {
-  margin-left: 20px;
-  margin-top: 20px;
+ margin: 20px;
   color: #4e75ff;
 }
-a {
-  text-decoration: underline;
+
+.gallery {
+  max-width: 1440px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  /*width: calc((100% - 72px) / 3);*/
+}
+
+.gallery-link {
+  text-decoration: none;
+}
+
+.gallery-image {
+  width: 360px;
+  height: 200px;
+}
+.gallery-link::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }

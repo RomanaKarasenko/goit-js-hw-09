@@ -22,9 +22,13 @@ function onFormSubmit(e) {
       message: messageValue,
     });
 
-    // Очищення сховища і полів форми
+    // Очищення сховища, полів форми і об'єкта для збереження значень
     localStorage.removeItem(STORAGE_KEY);
     form.reset();
+    clearFormValues();
+  } else if (emailValue || messageValue) {
+    // Якщо тільки одне поле заповнене, вивести алерт
+    alert('Please fill in both email and message fields before submitting.');
   }
 }
 
@@ -48,6 +52,11 @@ function loadFromLS(key) {
   } catch {
     return null;
   }
+}
+
+function clearFormValues() {
+  emailInput.value = '';
+  messageTextarea.value = '';
 }
 
 function init() {

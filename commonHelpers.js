@@ -4,12 +4,11 @@ import"./assets/modulepreload-polyfill-ec808ebb.js";/* empty css                
           <img
             class="gallery-image"
             src="${o.preview}"
-            width="360px"
             data-source="${o.original}"
             alt="${o.description}"
           />
         </a>
       </li>
     `).join(`
-`);e.innerHTML=i}n(t);new a(".gallery a",{captions:!0,captionDelay:250});
+`);e.innerHTML=i}n(t);new a(".gallery a",{captionsData:"alt",captionDelay:250});
 //# sourceMappingURL=commonHelpers.js.map
